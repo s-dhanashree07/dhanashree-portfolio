@@ -328,51 +328,51 @@ section {
 }
 
 /*Timeline*/
-.timeline {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    padding-bottom: 3rem;
-    .timeline-item {
-        position: relative;
-        padding-left: 3rem;
-        border-left: 1px solid var(--color-grey-5);
-        .tl-icon {
-            position: absolute;
-            left: -27px;
-            top: 0;
-            background-color: var(--color-secondary);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            i { font-size: 1.3rem; }
-        }
-        .tl-duration {
-            padding: .2rem .6rem;
-            background-color: var(--color-grey-5);
-            border-radius: 15px;
-            display: inline-block;
-            font-size: .8rem;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-        h5 {
-            padding: 1rem 0;
-            text-transform: uppercase;
-            font-size: 1.3rem;
-            font-weight: 600;
-            span {
-                color: var(--color-grey-2);
-                font-weight: 500;
-                font-size: 1.2rem;
-            }
-        }
-        p{ color: var(--color-grey-2); }
-    }
-}
+// .timeline {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-gap: 2rem;
+//     padding-bottom: 3rem;
+//     .timeline-item {
+//         position: relative;
+//         padding-left: 3rem;
+//         border-left: 1px solid var(--color-grey-5);
+//         .tl-icon {
+//             position: absolute;
+//             left: -27px;
+//             top: 0;
+//             background-color: var(--color-secondary);
+//             width: 50px;
+//             height: 50px;
+//             border-radius: 50%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             i { font-size: 1.3rem; }
+//         }
+//         .tl-duration {
+//             padding: .2rem .6rem;
+//             background-color: var(--color-grey-5);
+//             border-radius: 15px;
+//             display: inline-block;
+//             font-size: .8rem;
+//             text-transform: uppercase;
+//             font-weight: 500;
+//         }
+//         h5 {
+//             padding: 1rem 0;
+//             text-transform: uppercase;
+//             font-size: 1.3rem;
+//             font-weight: 600;
+//             span {
+//                 color: var(--color-grey-2);
+//                 font-weight: 500;
+//                 font-size: 1.2rem;
+//             }
+//         }
+//         p{ color: var(--color-grey-2); }
+//     }
+// }
 
 //Portfolios
 .port-text {
@@ -450,55 +450,55 @@ section {
 }
 
 //Blogs Section
-.blogs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    margin-top: 3rem;
-    .blog {
-        position: relative;
-        background-color: var(--color-grey-5);
-        border-radius: 5px;
-        box-shadow: 1px 1px 20px rgba(0,0,0,.1);
-        transition: all .4s ease-in-out;
-        &:hover {
-            box-shadow: 1px 1px 20px rgba(0,0,0,.3);
-            transform: translateY(-5px);
-            transition: all .4s ease-in-out;
-            img {
-                filter: grayscale(0);
-                transform: scale(1.1);
-                box-shadow: 0px 4px 15px rgba(0,0,0,0.8);
-            }
-        }
-        img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            filter: grayscale(100%);
-            transition: all .4s ease-in-out;
-        }
-        .blog-text {
-            margin-top: -7px;
-            padding: 1.1rem;
-            border-top: 8px solid var(--color-secondary);
-            h4 {
-                font-size: 1.5rem;
-                margin-bottom: .7rem;
-                transition: all .4s ease-in-out;
-                cursor: pointer;
-                &:hover { color: var(--color-secondary); }
-            }
-            p{
-                color: var(--color-grey-2);
-                line-height: 2rem;
-                padding-bottom: 1rem;
-            }
-        }
-    }
-}
+// .blogs {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-gap: 2rem;
+//     margin-top: 3rem;
+//     .blog {
+//         position: relative;
+//         background-color: var(--color-grey-5);
+//         border-radius: 5px;
+//         box-shadow: 1px 1px 20px rgba(0,0,0,.1);
+//         transition: all .4s ease-in-out;
+//         &:hover {
+//             box-shadow: 1px 1px 20px rgba(0,0,0,.3);
+//             transform: translateY(-5px);
+//             transition: all .4s ease-in-out;
+//             img {
+//                 filter: grayscale(0);
+//                 transform: scale(1.1);
+//                 box-shadow: 0px 4px 15px rgba(0,0,0,0.8);
+//             }
+//         }
+//         img {
+//             width: 100%;
+//             height: 300px;
+//             object-fit: cover;
+//             border-top-left-radius: 5px;
+//             border-top-right-radius: 5px;
+//             filter: grayscale(100%);
+//             transition: all .4s ease-in-out;
+//         }
+//         .blog-text {
+//             margin-top: -7px;
+//             padding: 1.1rem;
+//             border-top: 8px solid var(--color-secondary);
+//             h4 {
+//                 font-size: 1.5rem;
+//                 margin-bottom: .7rem;
+//                 transition: all .4s ease-in-out;
+//                 cursor: pointer;
+//                 &:hover { color: var(--color-secondary); }
+//             }
+//             p{
+//                 color: var(--color-grey-2);
+//                 line-height: 2rem;
+//                 padding-bottom: 1rem;
+//             }
+//         }
+//     }
+// }
 
 
 //Contact section
@@ -541,6 +541,7 @@ section {
         .contact-icon {
             display: flex;
             margin-top: 2rem;
+
             a {
                 display: flex;
                 align-items: center;
