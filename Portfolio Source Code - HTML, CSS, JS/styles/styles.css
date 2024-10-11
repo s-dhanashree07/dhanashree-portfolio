@@ -263,6 +263,7 @@ section {
   line-height: 2rem;
   padding: 1rem;
   color: var(--color-grey-1);
+  text-align: justify;
 }
 .about-container .left-about h4 {
   font-size: 2rem;
@@ -272,7 +273,7 @@ section {
 .about-stats {
   padding-bottom: 4rem;
 }
-.about-stats .progress-bars {
+/* .about-stats .progress-bars {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
@@ -325,7 +326,7 @@ section {
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .python {
   width: 70%;
-}
+} */
 
 .stat-title {
   text-transform: uppercase;
@@ -346,62 +347,90 @@ section {
 }
 
 
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
-}
-
 .skills-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap; /* Allow items to wrap */
   margin-top: 20px;
+  
 }
 
 .skill-box {
-  width: 45%;
-  background-color: rgba(255, 255, 255, 0.2); /* Transparent white background for boxes */
-  border: 1px solid rgba(255, 255, 255, 0.5); 
-  border-radius: 8px;
+
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+
+  width: 100%; /* Default to full width for mobile */
+  max-width: 900px; /* Increase max width for larger screens */
+  /* background-color: rgba(255, 255, 255, 0.1); Transparent white background for boxes */
+  /* border: 1px solid rgba(255, 255, 255, 0.5);  */
+  /* border-radius: 8px; */
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
   transform: scale(0.95);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  margin-bottom: 20px; /* Space between boxes */
 }
 
 .skill-box:hover {
   transform: scale(1.05); /* Slightly larger */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  border: 1px solid var(--color-secondary);
+
 }
 
 .box-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #ffffff; /* White color for title */
+  color: var(--color-secondary);
 }
 
 .experience-level {
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #333; /* Darker color for text */
+  display: block; /* Make it a block element for proper alignment */
+  margin-top: 5px; /* Add some space above the experience level */
+  font-weight: normal; /* Adjust font weight for subheading */
+  color: #FFFFFF; /* Ensure consistent text color */
+  font-size: 0.9rem; /* Smaller font size for subheading */
+  text-transform: capitalize; /* Capitalize the text */
+  padding-left: 2rem;
 }
+
+
+
 
 ul {
   list-style-type: none;
   padding: 0;
+  display: grid; /* Use grid layout for columns */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 10px; /* Space between items */
 }
 
 ul li {
+  padding-left: 2rem;
   margin: 10px 0;
   text-align: left;
   font-size: 1rem; /* Font size for skills */
+  color: #ffffff; /* Consistent text color */
 }
 
 ul li i {
   margin-right: 8px; /* Space between icon and text */
-  color: #007bff; /* Icon color */
+  color: var(--color-secondary);
 }
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .skill-box {
+    width: 45%; /* Adjust width for desktop */
+  }
+}
+
+
 
 
 /*Timeline*/
