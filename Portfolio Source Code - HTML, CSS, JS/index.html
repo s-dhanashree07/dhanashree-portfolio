@@ -575,7 +575,7 @@
                                     <span>: B.E in Computer Engineering</span>
                                 </p>
                             </div>
-                            <div class="contact-item">
+                            <!-- <div class="contact-item">
                                 <div class="icon">
                                     <i class="fas fa-phone-alt"></i>
                                     <span>Mobile Number</span>
@@ -583,7 +583,7 @@
                                 <p>
                                     <span>: +91 93261 12716</span>
                                 </p>
-                            </div>
+                            </div> -->
                             <div class="contact-item">
                                 <div class="icon">
                                     <i class="fas fa-globe"></i>
@@ -596,26 +596,22 @@
                         </div>
                         <div class="contact-icons">
                             <div class="contact-icon">
-                                <a href="https://www.linkedin.com" target="_blank">
+                                <a href="https://www.linkedin.com/in/your-profile" target="_blank">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" target="_blank">
+                                <a href="https://github.com/s-dhanashree07" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="mailto:your-email@example.com" target="_blank">
+                                <a href="mailto:dhanashreeshelke16@gmail.com" target="_blank">
                                     <i class="fas fa-envelope"></i>
                                 </a>
-                                <a href="https://wa.me/your-number" target="_blank">
+                                <!-- <a href="https://wa.me/9326112716" target="_blank">
                                     <i class="fab fa-whatsapp"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-
+                  
                     <!-- <div class="right-contact">
                         <form action="" class="contact-form">
                             <div class="input-control i-c-2">
@@ -636,26 +632,46 @@
                             </div>
                         </form>
                     </div> -->
-                    <!-- <div class="right-contact">
-                        <form action="send_email.php" method="POST" class="contact-form">
+                  
+                    <div class="right-contact">
+                        <form id="contact-form" class="contact-form">
                             <div class="input-control i-c-2">
-                                <input type="text" name="name" required placeholder="YOUR NAME">
-                                <input type="email" name="email" required placeholder="YOUR EMAIL">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
                             </div>
                             <div class="input-control">
-                                <input type="text" name="subject" required placeholder="ENTER SUBJECT">
+                                <input type="tel" name="phone" placeholder="Your Phone Number" required>
                             </div>
                             <div class="input-control">
-                                <textarea name="message" cols="15" rows="8" placeholder="Message Here..." required></textarea>
+                                <textarea name="message"cols="15" rows="8" placeholder="Message Here..."></textarea>
                             </div>
-                            <div class="submit-btn">
-                                <button type="submit" class="main-btn">
-                                    <span class="btn-text">Send Message</span>
+                            <button type="submit" class="main-btn" style="
+                            display: inline-flex; 
+                            font-family: inherit ;
+                            align-items: center; 
+                            background-color: transparent; 
+                            color: inherit; 
+                            position: relative;
+                            border: 1px solid var(--color-secondary); 
+                            border-radius: 30px; 
+                            text-decoration: none; 
+                            font-size: 1.1rem; 
+                            font-weight: 600; 
+                            overflow: hidden;
+                            transition: background-color 0.3s ease, color 0.3s ease;">
+                            <span class="btn-text">Send Message</span>
                                     <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                                </button>
+                            </button>
+                            <div class="btn-con" style="margin-top: 15px;">
+                                <a href="./img/Dhanashree_Shelke_BE.pdf" class="main-btn">
+                                    <span class="btn-text">Download CV</span>
+                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                                </a>
                             </div>
+                            </div>
+                           
                         </form>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -682,6 +698,32 @@
         <i class="fas fa-adjust"></i>
     </div>
     <script src="app.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("l5VzmpOcF_P-CmhiI"); // Replace with your User ID
+        })();
+    
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            emailjs.sendForm('service_xf2ukog', 'template_enntprq', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    alert('Failed to send message: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+    
+
+
+
+
+
+
 </body>
 
 </html>
